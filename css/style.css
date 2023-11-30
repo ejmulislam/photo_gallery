@@ -1,0 +1,101 @@
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; /* 10px = 1rem 16/10 = 62.5% */
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    color: #f8f8f8;
+    line-height: 1.6;
+}
+
+.container {
+    width: 120rem;
+    margin: 5rem auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .2rem;
+}
+
+.container > *:not(:first-child) {
+    height: 25rem;
+}
+
+.item {
+    position: relative;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.item-1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://i.ibb.co/x8hvdT7/bg-1.jpg);
+}
+
+.item-1:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://i.ibb.co/x8hvdT7/bg-1.jpg);
+}
+
+.item-2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://i.ibb.co/vsrxrhV/bg-2.jpg);
+}
+
+.item-2:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://i.ibb.co/vsrxrhV/bg-2.jpg);
+}
+
+.item-3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://i.ibb.co/7vCkW39/bg-3.jpg);
+}
+
+.item-3:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://i.ibb.co/7vCkW39/bg-3.jpg);
+}
+
+.item-4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://i.ibb.co/XSDQL81/bg-4.jpg);
+}
+
+.item-4:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://i.ibb.co/XSDQL81/bg-4.jpg);
+}
+
+.item-5 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(https://i.ibb.co/K9QYq68/bg-5.jpg);
+}
+
+.item-5:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://i.ibb.co/K9QYq68/bg-5.jpg);
+}
+
+.post {
+    position: absolute;
+    left: 3rem;
+    bottom: 3rem;
+
+    opacity: 0;
+    transform: translateY(20rem);
+    transition: all .2s ease-in-out;
+}
+
+.item:hover .post {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.date {
+    background: yellowgreen;
+    display: inline;
+    padding: .2rem;
+}
